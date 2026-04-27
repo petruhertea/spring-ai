@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ModelComparisonController {
     private final ChatClient chatClient;
 
-    public ModelComparisonController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+    public ModelComparisonController(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 
     @GetMapping("/models")

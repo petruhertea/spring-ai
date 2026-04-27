@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class VacationPlanController {
     private final ChatClient chatClient;
 
-    public VacationPlanController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+    public VacationPlanController(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 
     @GetMapping("/vacation/unstructured")

@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class AcmeBankController {
     private final ChatClient chatClient;
 
-    public AcmeBankController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+    public AcmeBankController(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 
     @GetMapping("/chat")

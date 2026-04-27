@@ -2,7 +2,6 @@ package com.petruth.myfirstspringai.chat;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +10,11 @@ import reactor.core.publisher.Flux;
 
 @RestController
 @RequestMapping("/api")
-public class OpenAIChatController {
+public class ChatController {
     private final ChatClient chatClient;
 
-    public OpenAIChatController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+    public ChatController(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 
     @GetMapping("/chat")

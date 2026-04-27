@@ -10,8 +10,8 @@ public class InputValidationGuardController {
 
     private final ChatClient chatClient;
 
-    public InputValidationGuardController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+    public InputValidationGuardController(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 
     @GetMapping("/input-validation")

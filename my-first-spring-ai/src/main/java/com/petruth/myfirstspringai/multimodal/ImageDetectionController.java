@@ -14,8 +14,8 @@ public class ImageDetectionController {
 
     @Value("classpath:/static/images/eu.png")
     Resource sampleImage;
-    public ImageDetectionController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+    public ImageDetectionController(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 
     @GetMapping("/image-to-text")

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ArticleController {
     private final ChatClient chatClient;
 
-    public ArticleController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+    public ArticleController(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 
     @GetMapping("/posts/new")
